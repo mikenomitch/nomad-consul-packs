@@ -11,7 +11,7 @@ pack {
   version     = "0.0.1"
 }
 
-dependency {
-  name   = "demo_dependency_pack_name"
-  source = "git://source.git/packs/demo_dependency_pack"
+dependency "shared" {
+  alias = "shared"
+  source = "????"
 }

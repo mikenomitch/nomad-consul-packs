@@ -32,18 +32,6 @@ variable "port" {
   default     = 8443
 }
 
-variable "consul_version" {
-  description = "The version of consul to use"
-  type        = string
-  default     = "1.16.1"
-}
-
-variable "consul_build" {
-  description = "The build type of consul to use (see https://releases.hashicorp.com/consul/1.16.1 for options)"
-  type        = string
-  default     = "linux_amd64"
-}
-
 variable "gateway_name" {
   description = "The name of the gateway to use"
   type        = string
@@ -70,12 +58,6 @@ variable "custom_gateway_config" {
   description = "A full gateway configuration template to use instead of the default"
   type        = string
   default     = ""
-}
-
-variable "download_consul" {
-  description = "Whether or not to download consul artifact to use in commands"
-  type        = bool
-  default     = true
 }
 
 variable "raw_exec" {

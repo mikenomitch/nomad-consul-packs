@@ -64,9 +64,9 @@ EOF
         ]
       }
 
-      [[ if var "download_consul" . ]]
+      [[ if var "download_consul" .shared ]]
       artifact {
-        source      = "https://releases.hashicorp.com/consul/[[var "consul_version" .]]/consul_[[var "consul_version" .]]_[[var "consul_build" .]].zip"
+        source      = "https://releases.hashicorp.com/consul/[[var "consul_version" .shared]]/consul_[[var "consul_version" .shared]]_[[var "consul_build" .shared]].zip"
         destination = "local/consul"
         mode        = "file"
       }
